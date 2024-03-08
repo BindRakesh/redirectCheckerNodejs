@@ -1,0 +1,70 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <style>
+        /* Style for the heading */
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Style for the form container */
+#inputForm {
+  margin-bottom: 20px;
+}
+
+/* Style for the textarea */
+#inputData {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+}
+
+/* Style for the submit button */
+input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff; /* BMW blue */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3; /* Darker shade of BMW blue */
+}
+
+    </style>
+
+  </head>
+  <body>
+    <h2>Redirect Checker 1.0</h2>
+    <div class="table-container">
+<form
+      id="inputForm"
+      action="/redirectCheck"
+      method="post"
+      onsubmit="return validateForm()"
+    >
+      <input id="inputData" name="inputData" >
+      
+      <input type="submit" value="Check Redirect" />
+    </form>
+
+    </div>
+    
+    <script>
+      function validateForm() { var inputData =
+      document.getElementById("inputData").value; if (inputData.trim() === "") {
+      alert("Please enter some data."); return false; // Prevent form submission
+      } return true; // Allow form submission }
+    </script>
+    {{>footer}}
+  </body>
+</html>

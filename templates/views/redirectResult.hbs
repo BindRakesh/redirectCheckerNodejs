@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Result</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<div class="table-container">
+    <h2>Redirect checker result</h2>
+    {{!-- <div>Source URL: {{data.source}}</div>
+    <div>Status Code: {{data.statusCode}}</div> --}}
+
+    <table>
+  <tr>
+    <th>Field</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>Date</td>
+    <td>{{data.Date}}</td>
+  </tr>
+    <tr>
+    <td>IST Date</td>
+    <td>{{data.istTime}}</td>
+  </tr>
+  <tr>
+    <td>Server</td>
+    <td>{{data.Server}}</td>
+  </tr>
+  <tr>
+    <td>Target Location</td>
+    <td><a href="{{data.Location}}" target="_blank">{{data.Location}}</a></td>
+  </tr>
+  <tr>
+    <td>Content-Length</td>
+    <td>{{data.Content-Length}}</td>
+  </tr>
+  <tr>
+    <td>Connection</td>
+    <td>{{data.Connection}}</td>
+  </tr>
+  <tr>
+    <td>Content-Type</td>
+    <td>{{data.Content-Type}}</td>
+  </tr>
+  <tr>
+    <td>Status Code</td>
+    <td>{{data.statusCode}}</td>
+  </tr>
+  <tr>
+    <td>Source</td>
+    <td><a href="{{data.Source}}" target="_blank">{{data.Source}}</a></td>
+  </tr>
+</table>
+    <div class="input-container">
+        <form
+      id="inputForm"
+      action="/redirectCheck"
+      method="post"
+      onsubmit="return validateForm()"
+    >
+      <input id="inputData" name="inputData" class="urlInput">
+      <button type="submit" value="Submit" />Check Redirect </button>
+    </form>
+    </div>
+
+
+</div>
+
+
+    
+
+    <script>
+      function validateForm() { var inputData =
+      document.getElementById("inputData").value; if (inputData.trim() === "") {
+      alert("Please enter some data."); return false; // Prevent form submission
+      } return true; // Allow form submission }
+    </script>    
+    {{>footer}}
+</body>
+
+</html>
