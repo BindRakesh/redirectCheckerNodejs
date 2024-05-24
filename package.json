@@ -15,6 +15,9 @@
     "git": "^0.1.5",
     "hbs": "^4.2.0",
     "nodemon": "^3.1.0",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "netlify-cli": "^12.7.2",
+    "netlify-lambda": "^2.0.15",
+    "serverless-http": "^2.7.0"
   }
 }
